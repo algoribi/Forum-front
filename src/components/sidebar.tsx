@@ -13,7 +13,7 @@ export default function Sidebar(props : PropsUser) {
 
     return (
         <div className='sidebar'>
-            <Link to='/' className='blog_title'>💜My_log💜</Link>
+            <Link to='/' className='blog_title'>💜We_log💜</Link>
             <Link to='/notice' className='user_info'>
                 <img className='user_icon' src='/images/basic_user_icon.png' />
                 <p className='user_name'>{props.user ? props.user : 'guest'}</p>

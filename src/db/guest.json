@@ -1,0 +1,8 @@
+[
+    {"id" : 1,  "name" : "Pooh", "content" : "You can be happy everyday but there are happy things everyday."},
+    {"id" : 2,  "name" : "Rafiki", "content" : "The past can hurt, but the way I see it, you can either run from it or learn from it."},
+    {"id" : 3,  "name" : "Aladdin", "content" : "Today's special moments are tomorrow's memories."},
+    {"id" : 4,  "name" : "Belle", "content" : "It's not until you lose everything that you can truly appreciate everything"},
+    {"id" : 5,  "name" : "Rapunzel", "content" : "Venture outside your comfort zone. The rewards are worth it."},
+    {"id" : 6,  "name" : "Ratatouille", "content" : "The only thing predictable about life is it's unpredictability"}
+]
