@@ -1,0 +1,49 @@
+.sidebar {
+    /* delete border */
+    border: 2px solid;
+
+    flex-basis: 250px;
+    flex-shrink: 0;
+    height: 100vh;
+    background-color: rgb(122, 151, 113);
+    margin: 5px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.blog_title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.sidebar_category {
+    border-bottom: 1px solid rgb(181, 219, 169);
+    font-size: 23px;
+    padding: 15px 0px 15px 0px;
+}
+
+.sidebar_category:hover {
+    background-color: azure;
+    font-weight: bold;
+}
+
+.user_info {
+    border-bottom: 1px solid rgb(181, 219, 169);
+    background-color: blanchedalmond;
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.user_icon {
+    height: 100px;
+    width: 100px;
+}
+
+.user_name {
+    font-size: 25px;
+    padding-top: 10px;
+}

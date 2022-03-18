@@ -1,0 +1,93 @@
+.header {
+    /* delete border */
+    border: 2px solid;
+
+    flex-basis: 90px;
+    flex-shrink: 0;
+    background-color: rgb(226, 197, 197);
+    margin: 5px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+/* 로그인 버튼 */
+
+.button {
+    font-size: 18px;
+    margin-left: 15px;
+    border-radius: 7px;
+    width: 100px;
+    height: 38px;
+    cursor: pointer;
+    background-color: rgb(168, 199, 235);
+    box-shadow: 1px 1px 1px rgb(79, 99, 212),
+        2px 2px 1px rgb(124, 105, 144);
+    margin-right: 30px;
+}
+
+.login::after {
+    content: "Login";
+}
+
+.logout::after {
+    content: "Logout";
+}
+
+/* 모달창 */
+
+.non_box {
+    display: none;
+}
+
+.modal_box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    font-size: 0;
+}
+
+.modal_message_box {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 150px;
+    border: 2px solid rgba(55, 56, 126, 0.452);
+    padding: 20px 20px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: -250px 0 0 -250px;
+    background: rgb(228, 239, 251);
+    font-size: 15px;
+}
+
+.input_box {
+    display: flex;
+    justify-content: center;
+}
+
+.modal_button {
+    font-size: 18px;
+    width: 90px;
+    height: 38px;
+}
+
+.close_box {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 30px;
+}
+
+.close_button {
+    border: none;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(168, 199, 235);
+}

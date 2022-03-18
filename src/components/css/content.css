@@ -1,0 +1,8 @@
+.content {
+    /* delete border */
+    border: 2px solid;
+
+    flex-grow: 1;
+    background-color: rgb(183, 171, 224);
+    margin: 5px;
+}
