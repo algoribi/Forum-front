@@ -6,8 +6,8 @@ export default function Sidebar(props : PropsUser) {
 
     const menus = [
         { name : 'Notice', path : '/notice' },
+        { name : 'Forum', path : '/forum' },
         { name : 'Album', path : '/album' },
-        { name : 'Diary', path : '/diary' },
         { name : 'Guest', path : '/guest' }
     ];
 

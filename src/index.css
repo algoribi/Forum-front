@@ -11,6 +11,10 @@ a {
     text-decoration: none;
 }
 
+.none_item {
+    display: none;
+}
+
 .header_and_content {
     display: flex;
     flex-flow: column wrap;

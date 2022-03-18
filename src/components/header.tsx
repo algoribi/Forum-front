@@ -34,7 +34,7 @@ export default function Header(props: Props) {
         <div className='header'>
             <button className={props.user ? 'logout button' : 'login button'}
                 onClick={() => { onClickLogin() }} />
-            <div className={ toggleModal ? 'modal_box' : 'non_box' }>
+            <div className={ toggleModal ? 'modal_box' : 'none_item' }>
                 <div className='modal_message_box'>
                     <div className='close_box'>
                         <button className='close_button' onClick={() => setUser(false)}>✖</button>

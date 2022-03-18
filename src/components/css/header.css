@@ -37,10 +37,6 @@
 
 /* 모달창 */
 
-.non_box {
-    display: none;
-}
-
 .modal_box {
     position: fixed;
     top: 0;
@@ -73,21 +69,25 @@
 
 .modal_button {
     font-size: 18px;
-    width: 90px;
+    width: 80px;
     height: 38px;
+}
+
+.input_username {
+    width: 210px;
 }
 
 .close_box {
     display: flex;
     flex-direction: row-reverse;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .close_button {
     border: none;
-    font-size: 18px;
+    font-size: 23px;
     width: 40px;
     height: 40px;
     cursor: pointer;
-    background-color: rgb(168, 199, 235);
+    background-color: rgb(0, 0, 0, 0);
 }
