@@ -1,12 +1,29 @@
 .content_box {
-    /* delete border */
-    border: 2px solid;
+    border: 2px solid #59467c;
 
-    flex-grow: 1;
-    background-color: rgb(183, 171, 224);
+    background-color: #eeeeee;
     margin: 5px;
+    flex-grow: 1;
 }
 
 .content {
+    flex-grow: 1;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+/* album */
+
+.content_album {
+    flex-basis: 100vh;
+    flex-grow: 1;
+    margin-top: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.img {
+    width: 300px;
 }

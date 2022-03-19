@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './css/header.css';
 
 interface Props {
@@ -32,6 +33,7 @@ export default function Header(props: Props) {
 
     return (
         <div className='header'>
+            <Link to='/' className='blog_title'>💜We_log💜</Link>
             <button className={props.user ? 'logout button' : 'login button'}
                 onClick={() => { onClickLogin() }} />
             <div className={ toggleModal ? 'modal_box' : 'none_item' }>

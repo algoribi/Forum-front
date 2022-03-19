@@ -1,39 +1,31 @@
 .sidebar {
-    /* delete border */
-    border: 2px solid;
+    border: 2px solid #59467c;
 
     flex-basis: 250px;
     flex-shrink: 0;
-    height: 100vh;
-    background-color: rgb(122, 151, 113);
+    background-color: #9c64a6;
     margin: 5px;
 
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     text-align: center;
 }
 
-.blog_title {
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 50px;
-}
-
 .sidebar_category {
-    border-bottom: 1px solid rgb(181, 219, 169);
+    border-bottom: 1px solid #b29ddb;
     font-size: 23px;
     padding: 15px 0px 15px 0px;
 }
 
 .sidebar_category:hover {
-    background-color: azure;
+    background-color: #b29ddb;
     font-weight: bold;
 }
 
 .user_info {
-    border-bottom: 1px solid rgb(181, 219, 169);
-    background-color: blanchedalmond;
-    margin-top: 40px;
+    border-bottom: 1px solid #b29ddb;
+    background-color: #dbd0e7;
+    margin-top: 65px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
