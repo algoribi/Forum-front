@@ -7,13 +7,16 @@ export default function Guest(props: PropsUser) {
     
     const setCommentUserName = () => {
         return (
-            <div className='comment_name'>
+            <div className='comment_header'>
                 {
                     props.user
-                        ? <p>{props.user}</p>
-                        : <input type="text" id='' />
+                        ? <p className='post_name'>{props.user}</p>
+                        : (<div>
+                            <label htmlFor='comment_input' className='post_name'>guest name : </label>
+                            <input type="text" id='comment_input' name='comment_input' />
+                        </div>)
                 }
-                <button className={props.user ? 'writing_button' : 'none_item'}>🖋</button>
+                <button className='writing_button'>➕</button>
             </div>    
         );
     }
@@ -22,7 +25,7 @@ export default function Guest(props: PropsUser) {
         <div className='content_box'>
             <ContentHeader user={props.user} category='Guest' />
             <div className='content_column'>
-                <div className='comment'>
+                <div className='post_div guest comment'>
                     {setCommentUserName()}
                     <input type="text" id='comment_content'name='comment_content'/>
                 </div>
