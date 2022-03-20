@@ -7,10 +7,10 @@ export default function Album(props : PropsUser) {
     return (
         <div className='content_box'>
             <ContentHeader user={props.user} category='Album' />
-            <div className='content_album'>
+            <div className='content_row'>
                 {contents.map(item => (
-                    <div className='img_div' key={item.id}>
-                        <img className='img' src={`/images/album/${item.img}`} alt={`${item.img}`} />
+                    <div className='img_div album' key={item.id}>
+                        <img className='img_thumbnail' src={`/images/album/${item.img}`} alt={`${item.img}`} />
                         <p className='img_title'>{item.title}</p>
                     </div>
                 ))}

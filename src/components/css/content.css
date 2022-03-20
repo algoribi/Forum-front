@@ -13,17 +13,82 @@
     justify-content: space-evenly;
 }
 
-/* album */
-
-.content_album {
-    flex-basis: 100vh;
-    flex-grow: 1;
-    margin-top: 30px;
+.content_row {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    margin: 50px;
 }
 
-.img {
+.content_column {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 50px;
+}
+
+/* album : content_row */
+
+.img_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.img_thumbnail {
+    margin: 10px;
     width: 300px;
+    height: 300px;
+}
+
+.img_title {
+    font-size: 20px;
+}
+
+/* notice, forum : content_column*/
+
+.post_div {
+    margin: 30px;
+}
+
+.post_title {
+    font-size: 30px;
+    border-bottom: 2px solid #59467c;
+}
+
+.post_content {
+    font-size : 17px;
+    margin-top: 10px;
+}
+
+/* guest : content_column */
+
+.guest {
+    border : 2px solid #85779e;
+}
+
+.post_header {
+    display : flex;
+    flex-direction : row;
+    align-items: baseline;
+    background-color: #b0a3ca;
+    border-bottom : 2px solid #a094b7;
+}
+
+.post_name {
+    font-size: 20px;
+    font-weight : bold;
+    margin-left: 10px;
+}
+
+.post_time {
+    margin-left: 20px;
+}
+
+.post_guest {
+    padding: 10px;
+    background-color: #e0e0e0;
+    height: 60px;
+    overflow-x:hidden;
+    overflow-y:auto;
 }
