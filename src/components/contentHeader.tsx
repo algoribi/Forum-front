@@ -11,7 +11,7 @@ export default function ContentHeader(props: Props) {
     return (
         <div className='content_header'>
             <p className='category'>{props.category}</p>
-            {props.category === 'Hello!'
+            {props.category === 'MainPage'
                 ? <></>
                 : <button className={props.user ? 'writing_button' : 'none_item'}>➕</button>
             }

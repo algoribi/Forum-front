@@ -11,15 +11,11 @@ import Guest from './contents/guest';
 export default function App() {
     const [user, setUser] = useState<string | null>(null);
 
-    const switchUserState = (name : string | null) => {
-        setUser(name);
-    }
-
     return (
         <div className='app'>
             <Sidebar user={user}/>
             <div className='header_and_content'>
-                <Header user={user} switchUserState={switchUserState} />
+                <Header user={user} setUser={setUser} />
 
                 <Routes>
                     <Route path='/' element={<MainPage user={user}/>} />

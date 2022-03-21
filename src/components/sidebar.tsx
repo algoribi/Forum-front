@@ -11,11 +11,19 @@ export default function Sidebar(props : PropsUser) {
         { name : 'Guest', path : '/guest' }
     ];
 
+    const profileName = () => {
+        return (
+            props.user
+                ? <p className='user_name'>{props.user}</p>
+                : <p className='user_name'>{'guest'}</p>
+        )
+    }
+
     return (
         <div className='sidebar'>
             <Link to='/notice' className='user_info'>
                 <img className='user_icon' src='/images/basic_user_icon.png' />
-                <p className='user_name'>{props.user ? props.user : 'guest'}</p>
+                {profileName()}
             </Link>
             {menus.map(item => {
                 return (

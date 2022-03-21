@@ -4,29 +4,27 @@ import './css/header.css';
 
 interface Props {
     user: string | null;
-    switchUserState: (name: string | null) => void;
+    setUser: (name: string | null) => void;
 }
 
 export default function Header(props: Props) {
     const [toggleModal, setToggleModal] = useState(false);
     const [userName, setUserName] = useState("");
 
-    const onClickLogin = () => {
-        if (props.user) {
-            props.switchUserState(null);
-        } else {
-            setToggleModal(true);
-        }
+    const modal_button = () => {
+        return (
+            props.user
+                ? <button className='logout button' onClick={() => { props.setUser(null) }} />
+                : <button className='login button' onClick={() => { setToggleModal(true) }} />
+        );
     }
-
-    const setUser = (button : boolean) => {
-        if (button) {
-            if (userName === "") {
-                props.switchUserState("User");
-            } else {
-                props.switchUserState(userName);
-                setUserName("");
-            }
+    
+    const setUser = () => {
+        if (userName === "") {
+            props.setUser("User");
+        } else {
+            props.setUser(userName);
+            setUserName("");
         }
         setToggleModal(false);
     }
@@ -34,25 +32,27 @@ export default function Header(props: Props) {
     return (
         <div className='header'>
             <Link to='/' className='blog_title'>💜We_log💜</Link>
-            <button className={props.user ? 'logout button' : 'login button'}
-                onClick={() => { onClickLogin() }} />
-            <div className={ toggleModal ? 'modal_box' : 'none_item' }>
-                <div className='modal_message_box'>
-                    <div className='close_box'>
-                        <button className='close_button' onClick={() => setUser(false)}>✖</button>
+            {modal_button()}
+            {toggleModal
+                ? <div className='modal_box'>
+                    <div className='modal_message_box'>
+                        <div className='close_box'>
+                            <button className='close_button' onClick={() => setToggleModal(false)}>✖</button>
+                        </div>
+                        <div className='input_box'>
+                            <input className='input_username' type='text'
+                                placeholder="Please enter your username."
+                                value={userName}
+                                onChange={(e) => {
+                                    setUserName(e.target.value);
+                                }}
+                                onKeyDown={(e) => { if (e.key === 'Enter') { setUser() } }} />
+                            <button className='modal_button button' onClick={() => setUser()}>✔</button>
+                        </div>
                     </div>
-                    <div className='input_box'>
-                        <input className='input_username' type='text'
-                            placeholder="Please enter your username."
-                            value={userName}
-                            onChange={(e) => {
-                                setUserName(e.target.value);
-                            }}
-                            onKeyDown={(e) => { if (e.key === 'Enter') { setUser(true) } }} />
-                        <button className='modal_button button' onClick={() => setUser(true)}>✔</button>
-                    </div>
-                </div>    
-            </div>
+                </div>
+                : <div className='none_item'></div>
+            }
         </div>
     );
 }
